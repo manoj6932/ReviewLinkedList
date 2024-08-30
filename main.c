@@ -42,10 +42,7 @@ int main() {
     insert(&head, 5);
 
     display(head);
-
-    // Bug: Deleting the head node without updating the head pointer
     free(head);
-
     display(head);
 
     return 0;
