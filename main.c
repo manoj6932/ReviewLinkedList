@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char test1;
+int s_Buffer[10]={0};
 struct Node {
     int data;
     struct Node* next;
@@ -33,7 +35,20 @@ void display(struct Node head) {
 }
 
 int main() {
+    int *ptr;
+	*ptr = 12;
+    
+    char*buffer= (char*) calloc(50, sizeof(char));
+    sprintf(buffer, "HELLO TEST");
+    printf("Data : %s\r\n", buffer);
+
+    for(int index = 0; index < 100; index++)
+    {
+        s_Buffer[index]=index;
+    }
+            
     struct Node* head = NULL;
+    head->data = 7;
 
     insert(&head, 1);
     insert(&head, 2);
